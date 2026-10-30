@@ -1,0 +1,892 @@
+{
+  "source_file": "WA_Fn-UseC_-HR-Employee-Attrition.csv",
+  "rows": 1470,
+  "original_columns": 35,
+  "dtypes": {
+    "Age": "int64",
+    "Attrition": "object",
+    "BusinessTravel": "object",
+    "DailyRate": "int64",
+    "Department": "object",
+    "DistanceFromHome": "int64",
+    "Education": "int64",
+    "EducationField": "object",
+    "EmployeeCount": "int64",
+    "EmployeeNumber": "int64",
+    "EnvironmentSatisfaction": "int64",
+    "Gender": "object",
+    "HourlyRate": "int64",
+    "JobInvolvement": "int64",
+    "JobLevel": "int64",
+    "JobRole": "object",
+    "JobSatisfaction": "int64",
+    "MaritalStatus": "object",
+    "MonthlyIncome": "int64",
+    "MonthlyRate": "int64",
+    "NumCompaniesWorked": "int64",
+    "Over18": "object",
+    "OverTime": "object",
+    "PercentSalaryHike": "int64",
+    "PerformanceRating": "int64",
+    "RelationshipSatisfaction": "int64",
+    "StandardHours": "int64",
+    "StockOptionLevel": "int64",
+    "TotalWorkingYears": "int64",
+    "TrainingTimesLastYear": "int64",
+    "WorkLifeBalance": "int64",
+    "YearsAtCompany": "int64",
+    "YearsInCurrentRole": "int64",
+    "YearsSinceLastPromotion": "int64",
+    "YearsWithCurrManager": "int64"
+  },
+  "distincts": {
+    "Age": 43,
+    "Attrition": 2,
+    "BusinessTravel": 3,
+    "DailyRate": 886,
+    "Department": 3,
+    "DistanceFromHome": 29,
+    "Education": 5,
+    "EducationField": 6,
+    "EmployeeCount": 1,
+    "EmployeeNumber": 1470,
+    "EnvironmentSatisfaction": 4,
+    "Gender": 2,
+    "HourlyRate": 71,
+    "JobInvolvement": 4,
+    "JobLevel": 5,
+    "JobRole": 9,
+    "JobSatisfaction": 4,
+    "MaritalStatus": 3,
+    "MonthlyIncome": 1349,
+    "MonthlyRate": 1427,
+    "NumCompaniesWorked": 10,
+    "Over18": 1,
+    "OverTime": 2,
+    "PercentSalaryHike": 15,
+    "PerformanceRating": 2,
+    "RelationshipSatisfaction": 4,
+    "StandardHours": 1,
+    "StockOptionLevel": 4,
+    "TotalWorkingYears": 40,
+    "TrainingTimesLastYear": 7,
+    "WorkLifeBalance": 4,
+    "YearsAtCompany": 37,
+    "YearsInCurrentRole": 19,
+    "YearsSinceLastPromotion": 16,
+    "YearsWithCurrManager": 18
+  },
+  "missing_total": 0,
+  "missing_by_column": {
+    "Age": 0,
+    "Attrition": 0,
+    "BusinessTravel": 0,
+    "DailyRate": 0,
+    "Department": 0,
+    "DistanceFromHome": 0,
+    "Education": 0,
+    "EducationField": 0,
+    "EmployeeCount": 0,
+    "EmployeeNumber": 0,
+    "EnvironmentSatisfaction": 0,
+    "Gender": 0,
+    "HourlyRate": 0,
+    "JobInvolvement": 0,
+    "JobLevel": 0,
+    "JobRole": 0,
+    "JobSatisfaction": 0,
+    "MaritalStatus": 0,
+    "MonthlyIncome": 0,
+    "MonthlyRate": 0,
+    "NumCompaniesWorked": 0,
+    "Over18": 0,
+    "OverTime": 0,
+    "PercentSalaryHike": 0,
+    "PerformanceRating": 0,
+    "RelationshipSatisfaction": 0,
+    "StandardHours": 0,
+    "StockOptionLevel": 0,
+    "TotalWorkingYears": 0,
+    "TrainingTimesLastYear": 0,
+    "WorkLifeBalance": 0,
+    "YearsAtCompany": 0,
+    "YearsInCurrentRole": 0,
+    "YearsSinceLastPromotion": 0,
+    "YearsWithCurrManager": 0
+  },
+  "duplicate_rows": 0,
+  "duplicate_employee_numbers": 0,
+  "constant_columns": [
+    "EmployeeCount",
+    "Over18",
+    "StandardHours"
+  ],
+  "logical_checks": {
+    "YearsAtCompany > TotalWorkingYears": 0,
+    "YearsInCurrentRole > YearsAtCompany": 0,
+    "YearsSinceLastPromotion > YearsAtCompany": 0,
+    "YearsWithCurrManager > YearsAtCompany": 0,
+    "Age < 18": 0,
+    "MonthlyIncome <= 0": 0
+  },
+  "outliers": {
+    "MonthlyIncome": {
+      "n": 114,
+      "lower": -5291.0,
+      "upper": 16581.0,
+      "min": 1009.0,
+      "max": 19999.0
+    },
+    "DistanceFromHome": {
+      "n": 0,
+      "lower": -16.0,
+      "upper": 32.0,
+      "min": 1.0,
+      "max": 29.0
+    },
+    "Age": {
+      "n": 0,
+      "lower": 10.5,
+      "upper": 62.5,
+      "min": 18.0,
+      "max": 60.0
+    },
+    "TotalWorkingYears": {
+      "n": 63,
+      "lower": -7.5,
+      "upper": 28.5,
+      "min": 0.0,
+      "max": 40.0
+    },
+    "YearsAtCompany": {
+      "n": 104,
+      "lower": -6.0,
+      "upper": 18.0,
+      "min": 0.0,
+      "max": 40.0
+    },
+    "DailyRate": {
+      "n": 0,
+      "lower": -573.0,
+      "upper": 2195.0,
+      "min": 102.0,
+      "max": 1499.0
+    },
+    "NumCompaniesWorked": {
+      "n": 52,
+      "lower": -3.5,
+      "upper": 8.5,
+      "min": 0.0,
+      "max": 9.0
+    },
+    "YearsSinceLastPromotion": {
+      "n": 107,
+      "lower": -4.5,
+      "upper": 7.5,
+      "min": 0.0,
+      "max": 15.0
+    }
+  },
+  "outliers_all": [
+    {
+      "variable": "Age",
+      "q1": 30.0,
+      "q3": 43.0,
+      "iqr": 13.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "DailyRate",
+      "q1": 465.0,
+      "q3": 1157.0,
+      "iqr": 692.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "DistanceFromHome",
+      "q1": 2.0,
+      "q3": 14.0,
+      "iqr": 12.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "Education",
+      "q1": 2.0,
+      "q3": 4.0,
+      "iqr": 2.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "EnvironmentSatisfaction",
+      "q1": 2.0,
+      "q3": 4.0,
+      "iqr": 2.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "HourlyRate",
+      "q1": 48.0,
+      "q3": 83.75,
+      "iqr": 35.75,
+      "n_flagged": 0
+    },
+    {
+      "variable": "JobInvolvement",
+      "q1": 2.0,
+      "q3": 3.0,
+      "iqr": 1.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "JobLevel",
+      "q1": 1.0,
+      "q3": 3.0,
+      "iqr": 2.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "JobSatisfaction",
+      "q1": 2.0,
+      "q3": 4.0,
+      "iqr": 2.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "MonthlyIncome",
+      "q1": 2911.0,
+      "q3": 8379.0,
+      "iqr": 5468.0,
+      "n_flagged": 114
+    },
+    {
+      "variable": "MonthlyRate",
+      "q1": 8047.0,
+      "q3": 20461.5,
+      "iqr": 12414.5,
+      "n_flagged": 0
+    },
+    {
+      "variable": "NumCompaniesWorked",
+      "q1": 1.0,
+      "q3": 4.0,
+      "iqr": 3.0,
+      "n_flagged": 52
+    },
+    {
+      "variable": "PercentSalaryHike",
+      "q1": 12.0,
+      "q3": 18.0,
+      "iqr": 6.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "PerformanceRating",
+      "q1": 3.0,
+      "q3": 3.0,
+      "iqr": 0.0,
+      "n_flagged": 226
+    },
+    {
+      "variable": "RelationshipSatisfaction",
+      "q1": 2.0,
+      "q3": 4.0,
+      "iqr": 2.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "StockOptionLevel",
+      "q1": 0.0,
+      "q3": 1.0,
+      "iqr": 1.0,
+      "n_flagged": 85
+    },
+    {
+      "variable": "TotalWorkingYears",
+      "q1": 6.0,
+      "q3": 15.0,
+      "iqr": 9.0,
+      "n_flagged": 63
+    },
+    {
+      "variable": "TrainingTimesLastYear",
+      "q1": 2.0,
+      "q3": 3.0,
+      "iqr": 1.0,
+      "n_flagged": 238
+    },
+    {
+      "variable": "WorkLifeBalance",
+      "q1": 2.0,
+      "q3": 3.0,
+      "iqr": 1.0,
+      "n_flagged": 0
+    },
+    {
+      "variable": "YearsAtCompany",
+      "q1": 3.0,
+      "q3": 9.0,
+      "iqr": 6.0,
+      "n_flagged": 104
+    },
+    {
+      "variable": "YearsInCurrentRole",
+      "q1": 2.0,
+      "q3": 7.0,
+      "iqr": 5.0,
+      "n_flagged": 21
+    },
+    {
+      "variable": "YearsSinceLastPromotion",
+      "q1": 0.0,
+      "q3": 3.0,
+      "iqr": 3.0,
+      "n_flagged": 107
+    },
+    {
+      "variable": "YearsWithCurrManager",
+      "q1": 2.0,
+      "q3": 7.0,
+      "iqr": 5.0,
+      "n_flagged": 14
+    }
+  ],
+  "attrition_counts": {
+    "No": 1233,
+    "Yes": 237
+  },
+  "attrition_rate": 0.16122448979591836,
+  "summaries": {
+    "OverTime": [
+      {
+        "OverTime": "No",
+        "left": 110,
+        "n": 1054,
+        "rate": 0.10436432637571158
+      },
+      {
+        "OverTime": "Yes",
+        "left": 127,
+        "n": 416,
+        "rate": 0.30528846153846156
+      }
+    ],
+    "BusinessTravel": [
+      {
+        "BusinessTravel": "Non-Travel",
+        "left": 12,
+        "n": 150,
+        "rate": 0.08
+      },
+      {
+        "BusinessTravel": "Travel_Frequently",
+        "left": 69,
+        "n": 277,
+        "rate": 0.2490974729241877
+      },
+      {
+        "BusinessTravel": "Travel_Rarely",
+        "left": 156,
+        "n": 1043,
+        "rate": 0.14956855225311602
+      }
+    ],
+    "JobSatisfaction": [
+      {
+        "JobSatisfaction": 1,
+        "left": 66,
+        "n": 289,
+        "rate": 0.22837370242214533
+      },
+      {
+        "JobSatisfaction": 2,
+        "left": 46,
+        "n": 280,
+        "rate": 0.16428571428571428
+      },
+      {
+        "JobSatisfaction": 3,
+        "left": 73,
+        "n": 442,
+        "rate": 0.16515837104072398
+      },
+      {
+        "JobSatisfaction": 4,
+        "left": 52,
+        "n": 459,
+        "rate": 0.11328976034858387
+      }
+    ],
+    "TenureGroup": [
+      {
+        "TenureGroup": "0 đến 1 năm",
+        "left": 75,
+        "n": 215,
+        "rate": 0.3488372093023256
+      },
+      {
+        "TenureGroup": "2 đến 4 năm",
+        "left": 66,
+        "n": 365,
+        "rate": 0.18082191780821918
+      },
+      {
+        "TenureGroup": "5 đến 9 năm",
+        "left": 58,
+        "n": 524,
+        "rate": 0.11068702290076336
+      },
+      {
+        "TenureGroup": "Từ 10 năm",
+        "left": 38,
+        "n": 366,
+        "rate": 0.10382513661202186
+      }
+    ],
+    "WorkLifeBalance": [
+      {
+        "WorkLifeBalance": 1,
+        "left": 25,
+        "n": 80,
+        "rate": 0.3125
+      },
+      {
+        "WorkLifeBalance": 2,
+        "left": 58,
+        "n": 344,
+        "rate": 0.1686046511627907
+      },
+      {
+        "WorkLifeBalance": 3,
+        "left": 127,
+        "n": 893,
+        "rate": 0.1422172452407615
+      },
+      {
+        "WorkLifeBalance": 4,
+        "left": 27,
+        "n": 153,
+        "rate": 0.17647058823529413
+      }
+    ],
+    "IncomeQuintile": [
+      {
+        "IncomeQuintile": "Q1 thấp nhất",
+        "left": 92,
+        "n": 294,
+        "rate": 0.3129251700680272
+      },
+      {
+        "IncomeQuintile": "Q2",
+        "left": 50,
+        "n": 294,
+        "rate": 0.17006802721088435
+      },
+      {
+        "IncomeQuintile": "Q3",
+        "left": 31,
+        "n": 294,
+        "rate": 0.1054421768707483
+      },
+      {
+        "IncomeQuintile": "Q4",
+        "left": 37,
+        "n": 294,
+        "rate": 0.12585034013605442
+      },
+      {
+        "IncomeQuintile": "Q5 cao nhất",
+        "left": 27,
+        "n": 294,
+        "rate": 0.09183673469387756
+      }
+    ],
+    "JobRole": [
+      {
+        "JobRole": "Healthcare Representative",
+        "left": 9,
+        "n": 131,
+        "rate": 0.06870229007633588
+      },
+      {
+        "JobRole": "Human Resources",
+        "left": 12,
+        "n": 52,
+        "rate": 0.23076923076923078
+      },
+      {
+        "JobRole": "Laboratory Technician",
+        "left": 62,
+        "n": 259,
+        "rate": 0.23938223938223938
+      },
+      {
+        "JobRole": "Manager",
+        "left": 5,
+        "n": 102,
+        "rate": 0.049019607843137254
+      },
+      {
+        "JobRole": "Manufacturing Director",
+        "left": 10,
+        "n": 145,
+        "rate": 0.06896551724137931
+      },
+      {
+        "JobRole": "Research Director",
+        "left": 2,
+        "n": 80,
+        "rate": 0.025
+      },
+      {
+        "JobRole": "Research Scientist",
+        "left": 47,
+        "n": 292,
+        "rate": 0.16095890410958905
+      },
+      {
+        "JobRole": "Sales Executive",
+        "left": 57,
+        "n": 326,
+        "rate": 0.17484662576687116
+      },
+      {
+        "JobRole": "Sales Representative",
+        "left": 33,
+        "n": 83,
+        "rate": 0.39759036144578314
+      }
+    ],
+    "PerformanceRating": [
+      {
+        "PerformanceRating": 3,
+        "left": 200,
+        "n": 1244,
+        "rate": 0.1607717041800643
+      },
+      {
+        "PerformanceRating": 4,
+        "left": 37,
+        "n": 226,
+        "rate": 0.16371681415929204
+      }
+    ],
+    "StockOptionLevel": [
+      {
+        "StockOptionLevel": 0,
+        "left": 154,
+        "n": 631,
+        "rate": 0.24405705229793978
+      },
+      {
+        "StockOptionLevel": 1,
+        "left": 56,
+        "n": 596,
+        "rate": 0.09395973154362416
+      },
+      {
+        "StockOptionLevel": 2,
+        "left": 12,
+        "n": 158,
+        "rate": 0.0759493670886076
+      },
+      {
+        "StockOptionLevel": 3,
+        "left": 15,
+        "n": 85,
+        "rate": 0.17647058823529413
+      }
+    ],
+    "OT_TenureGroup": [
+      {
+        "OT_TenureGroup": "Có tăng ca, 0 đến 1 năm",
+        "left": 38,
+        "n": 69,
+        "rate": 0.5507246376811594
+      },
+      {
+        "OT_TenureGroup": "Có tăng ca, trên 1 năm",
+        "left": 89,
+        "n": 347,
+        "rate": 0.2564841498559078
+      },
+      {
+        "OT_TenureGroup": "Không tăng ca, 0 đến 1 năm",
+        "left": 37,
+        "n": 146,
+        "rate": 0.2534246575342466
+      },
+      {
+        "OT_TenureGroup": "Không tăng ca, trên 1 năm",
+        "left": 73,
+        "n": 908,
+        "rate": 0.08039647577092511
+      }
+    ]
+  },
+  "tests": {
+    "H1": {
+      "variable": "OverTime",
+      "stat": 89.04387862461931,
+      "p": 3.861517910432905e-21,
+      "v": 0.2461179942458043,
+      "dof": 1,
+      "p_bh": 3.475366119389615e-20
+    },
+    "H2": {
+      "variable": "BusinessTravel",
+      "stat": 24.182413685655174,
+      "p": 5.608614476449931e-06,
+      "v": 0.12825997643406717,
+      "dof": 2,
+      "p_bh": 8.412921714674897e-06
+    },
+    "H3": {
+      "variable": "JobSatisfaction",
+      "stat": 17.505077010348,
+      "p": 0.0005563004510387556,
+      "v": 0.1091247710343438,
+      "dof": 3,
+      "p_bh": 0.0007152434370498287
+    },
+    "H4": {
+      "variable": "TenureGroup",
+      "stat": 75.81119757872338,
+      "p": 2.427916339759274e-16,
+      "v": 0.22709522947616542,
+      "dof": 3,
+      "p_bh": 1.0925623528916733e-15
+    },
+    "H6": {
+      "variable": "WorkLifeBalance",
+      "stat": 16.3250970916474,
+      "p": 0.0009725698845348824,
+      "v": 0.10538267516821954,
+      "dof": 3,
+      "p_bh": 0.0010941411201017427
+    },
+    "H7": {
+      "variable": "JobRole",
+      "stat": 86.19025367670434,
+      "p": 2.752481638050657e-15,
+      "v": 0.24214215996065436,
+      "dof": 8,
+      "p_bh": 8.257444914151972e-15
+    },
+    "H8": {
+      "variable": "PerformanceRating",
+      "stat": 0.0122669830789601,
+      "p": 0.9118095098007253,
+      "v": 0.0028887517110807873,
+      "dof": 1,
+      "p_bh": 0.9118095098007253
+    },
+    "H9": {
+      "variable": "StockOptionLevel",
+      "stat": 60.59830108612225,
+      "p": 4.379390336108354e-13,
+      "v": 0.2030353025269054,
+      "dof": 3,
+      "p_bh": 7.882902604995037e-13
+    },
+    "H5": {
+      "variable": "MonthlyIncome",
+      "stat": 100620.5,
+      "p": 2.950830917288873e-14,
+      "rank_biserial": -0.3113397052231017,
+      "p_bh": 6.639369563899965e-14
+    }
+  },
+  "income_left": {
+    "mean": 4787.0928270042195,
+    "median": 3202.0,
+    "n": 237
+  },
+  "income_stay": {
+    "mean": 6832.739659367397,
+    "median": 5204.0,
+    "n": 1233
+  },
+  "model_features": [
+    "BusinessTravel",
+    "DailyRate",
+    "Department",
+    "DistanceFromHome",
+    "Education",
+    "EducationField",
+    "EnvironmentSatisfaction",
+    "HourlyRate",
+    "JobInvolvement",
+    "JobLevel",
+    "JobRole",
+    "JobSatisfaction",
+    "MonthlyIncome",
+    "MonthlyRate",
+    "NumCompaniesWorked",
+    "OverTime",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager"
+  ],
+  "model_num_features": [
+    "DailyRate",
+    "DistanceFromHome",
+    "Education",
+    "EnvironmentSatisfaction",
+    "HourlyRate",
+    "JobInvolvement",
+    "JobLevel",
+    "JobSatisfaction",
+    "MonthlyIncome",
+    "MonthlyRate",
+    "NumCompaniesWorked",
+    "PercentSalaryHike",
+    "PerformanceRating",
+    "RelationshipSatisfaction",
+    "StockOptionLevel",
+    "TotalWorkingYears",
+    "TrainingTimesLastYear",
+    "WorkLifeBalance",
+    "YearsAtCompany",
+    "YearsInCurrentRole",
+    "YearsSinceLastPromotion",
+    "YearsWithCurrManager"
+  ],
+  "model_cat_features": [
+    "BusinessTravel",
+    "Department",
+    "EducationField",
+    "JobRole",
+    "OverTime"
+  ],
+  "train_rows": 1029,
+  "test_rows": 441,
+  "train_positive": 166,
+  "test_positive": 71,
+  "cv_scores": {
+    "Logistic Regression": {
+      "mean": 0.817632400086359,
+      "std": 0.05309029695711332
+    },
+    "Random Forest": {
+      "mean": 0.8012790482016658,
+      "std": 0.045309299735321086
+    }
+  },
+  "model_eval": {
+    "Dự báo đa số": {
+      "accuracy": 0.8390022675736961,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.16099773242630386,
+      "confusion": [
+        [
+          370,
+          0
+        ],
+        [
+          71,
+          0
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.764172335600907,
+      "precision": 0.37404580152671757,
+      "recall": 0.6901408450704225,
+      "f1": 0.48514851485148514,
+      "roc_auc": 0.8009135896459839,
+      "pr_auc": 0.5839823855112352,
+      "confusion": [
+        [
+          288,
+          82
+        ],
+        [
+          22,
+          49
+        ]
+      ]
+    },
+    "Random Forest": {
+      "accuracy": 0.8208616780045351,
+      "precision": 0.42857142857142855,
+      "recall": 0.3380281690140845,
+      "f1": 0.3779527559055118,
+      "roc_auc": 0.773429767795965,
+      "pr_auc": 0.4133533904911466,
+      "confusion": [
+        [
+          338,
+          32
+        ],
+        [
+          47,
+          24
+        ]
+      ]
+    }
+  },
+  "selected_model": "Logistic Regression",
+  "robustness": [
+    {
+      "model": "RobustScaler",
+      "cv_roc_auc": 0.8180203504246901,
+      "test_roc_auc": 0.80228397411496,
+      "test_pr_auc": 0.5904658018358023,
+      "test_accuracy": 0.7664399092970522,
+      "test_recall": 0.6901408450704225
+    },
+    {
+      "model": "RobustScaler + OneHot hai bien thu bac",
+      "cv_roc_auc": 0.8349945210948032,
+      "test_roc_auc": 0.8123715264560335,
+      "test_pr_auc": 0.6124597538691637,
+      "test_accuracy": 0.780045351473923,
+      "test_recall": 0.6901408450704225
+    }
+  ],
+  "spearman_multicollinearity": {
+    "MonthlyIncome_JobLevel": 0.9204286748392109,
+    "YearsAtCompany_YearsInCurrentRole": 0.8539995332892505
+  },
+  "monthlyincome_skew": 1.3698166808390662,
+  "importance": {
+    "BusinessTravel": 0.016558812333460127,
+    "DailyRate": -0.0018326173255751904,
+    "Department": -0.0020120724346077224,
+    "DistanceFromHome": 0.004312360650388742,
+    "Education": 0.00029909184838754807,
+    "EducationField": 0.0022078416444612425,
+    "EnvironmentSatisfaction": 0.013132851161020127,
+    "HourlyRate": -0.0031921257273371173,
+    "JobInvolvement": 0.008059165805644586,
+    "JobLevel": 0.01025069334928481,
+    "JobRole": 0.031796182500407756,
+    "JobSatisfaction": 0.021094132361737943,
+    "MonthlyIncome": 0.026456033498286895,
+    "MonthlyRate": -0.0008374571754854454,
+    "NumCompaniesWorked": 0.017320137038446832,
+    "OverTime": 0.07801403012670609,
+    "PercentSalaryHike": 0.0021534613083907645,
+    "PerformanceRating": 0.0017401707542551595,
+    "RelationshipSatisfaction": 0.0012018054271574843,
+    "StockOptionLevel": 0.017167872097449473,
+    "TotalWorkingYears": 0.031045733862635188,
+    "TrainingTimesLastYear": 0.005405405405405318,
+    "WorkLifeBalance": 0.0024960574256347933,
+    "YearsAtCompany": 0.003866441894610828,
+    "YearsInCurrentRole": 0.007341345369514315,
+    "YearsSinceLastPromotion": 0.029240306705095413,
+    "YearsWithCurrManager": 0.0017564848550763537
+  }
+}
